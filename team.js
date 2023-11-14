@@ -1,15 +1,7 @@
-let estudiantes = [];
+let estudiantes = [;
 Object
 {
-    name: "Monica",
-    surname: "Guerra",
-    age: 30,
-    city: "",
-    hobby: "",
-    favoriteFood: "",
-    favoriteVideoGame: "",
-    favoriteFilm: "",
-    favoriteBook: "",
-    petName: "",
+    name: "", surname: "", age: "", city: "",hobby: "", favoriteFood: "", favoriteVideoGame: "",
+    favoriteFilm: "", favoriteBook: "", petName: "",
 }
-
+]
