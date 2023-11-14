@@ -1,6 +1,4 @@
-let estudiantes = [estudiante];
-
-let estudiante = {
+let fcojavier = {
     name: "Francisco Javier",
     surname: "Martinez Rodriguez",
     age: 27,
@@ -12,3 +10,5 @@ let estudiante = {
     favoriteBook: "Vigilantes",
     petName: "",
 }
+
+let estudiantes = [fcojavier];
