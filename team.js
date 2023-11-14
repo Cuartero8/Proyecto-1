@@ -19,3 +19,23 @@ let estudiantes = [
     }
 ];
 
+function ordenarPorNombre(estudiantes=[]) {
+    let listaNombres = [];
+
+    for (i in estudiantes) {    // Bucle para conseguir los nombres
+        listaNombres.push([estudiantes[i].surname, estudiantes[i].name]);
+    };
+
+    listaOrdenada = listaNombres.sort();    // Ordeno los nombres
+    console.log(listaOrdenada);
+
+    // console.log("Lista de equipo ordenada por Apellido-Nombre:");
+    // for (i in listaOrdenada) {   // Bucle para mostrar los nombres ordenados
+    //     for (o in estudiantes) {
+    //         if ()
+
+    //     }
+    // };
+};
+
+ordenarPorNombre(estudiantes);
