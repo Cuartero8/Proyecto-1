@@ -1,6 +1,6 @@
 let estudiantes = [
     {
-        name: "", surname: "", age: "", city: "",hobby: "", favoriteFood: "", favoriteVideoGame: "",
+        name: "monica", surname: "guerra", age:30, city: "Tarragona", hobby: "leer", favoriteFood: "sushi", favoriteVideoGame: "",
         favoriteFilm: "", favoriteBook: "", petName: "",
     },
       {name: "Carlos", surname: "Cuartero", age: 26, city: "Zaragoza", hobby: ["Futsal", "Mangaku", "Videojuegos", "Fiestuki"], 
