@@ -31,4 +31,8 @@ let estudiantes = [
         }
     ];
 
-
+function orderByAge(){
+  let estudiantesCopy=[...estudiantes];
+  estudiantesCopy.sort((a,b)=>(a.age-b.age));
+  estudiantesCopy.forEach((e)=>console.log(`${e.name} ${e.age}`));
+}
