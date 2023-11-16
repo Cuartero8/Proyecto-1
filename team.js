@@ -1,5 +1,5 @@
 let estudiantes = [
-  {
+
     name: "paul",
     surname: "castillo",
     age: 25,
@@ -9,8 +9,9 @@ let estudiantes = [
     favoriteVideoGame: "fifa",
     favoriteFilm: "",
     favoriteBook: "",
-    petName: "",
+     petName: "",
   },
+
   {
     name: "monica",
     surname: "guerra",
@@ -47,7 +48,8 @@ let estudiantes = [
     favoriteBook: "Harry Potter",
     petName: "",
   },
-  {
+
+      {
     name: "Francisco Javier",
     surname: "Martinez Rodriguez",
     age: 27,
@@ -57,6 +59,7 @@ let estudiantes = [
     favoriteVideoGame: "Risk of Rain 2",
     favoriteFilm: "Better call Saul",
     favoriteBook: "Vigilantes",
+
     petName: "",
   },
 ];
@@ -90,3 +93,56 @@ let nombreRepetido = (duplicados) => {
   }
 };
 nombreRepetido(duplicados);
+=======
+  }]
+
+
+function ordenarEstudiantes() {     
+
+    let listaOrdenada = estudiantes.sort(function (a, b) { 
+        if (a.surname.toLowerCase() > b.surname.toLowerCase()) {
+            return 1;
+        } else if (a.surname.toLowerCase() < b.surname.toLowerCase()) {
+            return -1;
+        } else if (a.surname.toLowerCase() === b.surname.toLowerCase()) {
+            if (a.name.toLowerCase() > b.name.toLowerCase()) {
+                return 1;
+            } else if (a.name.toLowerCase() < b.name.toLowerCase()) {
+                return -1;
+            } else { return 0; }
+        }
+    }
+    );
+
+    for (i in listaOrdenada) {      
+        console.log(`${listaOrdenada[i].name} ${listaOrdenada[i].surname}:`);
+        for (k in listaOrdenada[i]) {
+            process.stdout.write(`${k}: ${listaOrdenada[i][k]} `);
+        }
+        console.log();
+    };
+};
+ordenarEstudiantes();
+
+
+function middleAge() {
+  let aux = [...estudiantes];
+  aux.sort((a, b) => a.age - b.age);
+  let i = Math.floor(aux.length/2);
+  console.log("The person with the middle age is " + aux[i].name + ", who is " + aux[i].age + " years old.");
+}
+
+middleAge();
+
+
+let whoHasAPet = (estudiantes) => {
+  for(let i=0; i<=estudiantes.length-1; i++){
+  let list = (estudiantes[i])
+  
+  if (list.petName != "" ){
+    console.log(list.name, ("tiene mascota"));
+  }}
+}
+
+whoHasAPet(estudiantes);
+
