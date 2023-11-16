@@ -42,3 +42,22 @@ let estudiantes = [
       petName: ""
     },
   ];
+
+  const busqueda = estudiantes.reduce((acc, estudiantes) => {
+    acc[estudiantes.name] = ++acc[estudiantes.name] || 0;
+    return acc;
+    }, {}); 
+  
+    const duplicados = estudiantes.filter( (estudiantes) => {
+      return busqueda[estudiantes.name];
+    });
+
+let nombreRepetido = (duplicados) => {
+    for (let i = 0; i <= duplicados.length - 1; i++) {
+        let list = duplicados[i];
+
+    if(estudiantes.indexOf(estudiantes.name)!=-1 && estudiantes.indexOf(estudiantes.name)==-1)
+        repetidos.push(estudiantes.name); {
+            console.log(list.name, "esta repetido")}
+    }};
+             nombreRepetido(duplicados); 
