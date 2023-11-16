@@ -152,6 +152,8 @@ function orderByAge() {
   estudiantesCopy.forEach((e) => console.log(`${e.name} ${e.age}`));
 };
 
+orderByAge();
+
 let whoGame = (estudiantes) => {
   for (let i = 0; i <= estudiantes.length - 1; i++) {
     let list = estudiantes[i];
