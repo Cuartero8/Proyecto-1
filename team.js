@@ -9,36 +9,63 @@ let estudiantes = [
     favoriteVideoGame: "fifa",
     favoriteFilm: "",
     favoriteBook: "",
-    petName: ""
-    },
-    {
-        name: "monica", surname: "guerra", age:30, city: "Tarragona", hobby: "leer", favoriteFood: "sushi", favoriteVideoGame: "",
-        favoriteFilm: "", favoriteBook: "", petName: "",
-    },
-      {name: "Carlos", surname: "Cuartero", age: 26, city: "Zaragoza", hobby: ["Futsal", "Mangaku", "Videojuegos", "Fiestuki"], 
-                    favoriteFood: "Pizza", favoriteVideoGame: "Fire Emblem", favoriteFilm: "LoR", favoriteBook: "Soy analfabeto", petName: "Cuquin"},
+    petName: "",
+  },
   {
-        name: "Christian",
-        surname: "Hernandez",
-        age: 25,
-        city: "Vitoria-Gasteiz",
-        hobby: "Videojuegos",
-        favoriteFood: "Lasagna",
-        favoriteVideoGame: "Pokemon",
-        favoriteFilm: "Harry Potter",
-        favoriteBook: "Harry Potter",
-        petName: ""
-        },
-    {
-      name: "Francisco Javier",
-      surname: "Martinez Rodriguez",
-      age: 27,
-      city: "Badajoz",
-      hobby: "Videogames",
-      favoriteFood: "Kebab",
-      favoriteVideoGame: "Risk of Rain 2",
-      favoriteFilm: "Better call Saul",
-      favoriteBook: "Vigilantes",
-      petName: ""
-    },
-  ];
+    name: "monica",
+    surname: "guerra",
+    age: 30,
+    city: "Tarragona",
+    hobby: "leer",
+    favoriteFood: "sushi",
+    favoriteVideoGame: "",
+    favoriteFilm: "",
+    favoriteBook: "",
+    petName: "",
+  },
+  {
+    name: "Carlos",
+    surname: "Cuartero",
+    age: 26,
+    city: "Zaragoza",
+    hobby: ["Futsal", "Mangaku", "Videojuegos", "Fiestuki"],
+    favoriteFood: "Pizza",
+    favoriteVideoGame: "Fire Emblem",
+    favoriteFilm: "LoR",
+    favoriteBook: "Soy analfabeto",
+    petName: "Cuquin",
+  },
+  {
+    name: "Christian",
+    surname: "Hernandez",
+    age: 25,
+    city: "Vitoria-Gasteiz",
+    hobby: "Videojuegos",
+    favoriteFood: "Lasagna",
+    favoriteVideoGame: "Pokemon",
+    favoriteFilm: "Harry Potter",
+    favoriteBook: "Harry Potter",
+    petName: "",
+  },
+  {
+    name: "Francisco Javier",
+    surname: "Martinez Rodriguez",
+    age: 27,
+    city: "Badajoz",
+    hobby: "Videogames",
+    favoriteFood: "Kebab",
+    favoriteVideoGame: "Risk of Rain 2",
+    favoriteFilm: "Better call Saul",
+    favoriteBook: "Vigilantes",
+    petName: "",
+  },
+];
+
+function middleAge() {
+  let aux = [...estudiantes];
+  aux.sort((a, b) => a.age - b.age);
+  let i = Math.floor(aux.length/2);
+  console.log("The person with the middle age is " + aux[i].name + ", who is " + aux[i].age + " years old.");
+}
+
+middleAge();
