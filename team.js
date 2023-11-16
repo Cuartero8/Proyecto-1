@@ -9,9 +9,8 @@ let estudiantes = [
     favoriteVideoGame: "fifa",
     favoriteFilm: "",
     favoriteBook: "",
-<<<<<<< HEAD
-    petName: "",
   },
+
   {
     name: "monica",
     surname: "guerra",
@@ -38,19 +37,6 @@ let estudiantes = [
   },
   {
     name: "Christian",
-=======
-    petName: ""
-},
-{
-    name: "monica", surname: "guerra", age:30, city: "Tarragona", hobby: "leer", favoriteFood: "sushi", favoriteVideoGame: "",
-    favoriteFilm: "", favoriteBook: "", petName: "",
-},
-{   
-    name: "Carlos", surname: "Cuartero", age: 26, city: "Zaragoza", hobby: ["Futsal", "Mangaku", "Videojuegos", "Fiestuki"], 
-    favoriteFood: "Pizza", favoriteVideoGame: "Fire Emblem", favoriteFilm: "LoR", favoriteBook: "Soy analfabeto", petName: "Cuquin"
-},
-{   name: "Christian",
->>>>>>> 3231665105103f482068c40eb9191bf5ba69e0fc
     surname: "Hernandez",
     age: 25,
     city: "Vitoria-Gasteiz",
@@ -58,16 +44,9 @@ let estudiantes = [
     favoriteFood: "Lasagna",
     favoriteVideoGame: "Pokemon",
     favoriteFilm: "Harry Potter",
-    favoriteBook: "Harry Potter",
-<<<<<<< HEAD
-    petName: "",
-  },
-  {
-=======
-    petName: ""
-},
-{
->>>>>>> 3231665105103f482068c40eb9191bf5ba69e0fc
+    favoriteBook: "Harry Potter"},
+
+    {
     name: "Francisco Javier",
     surname: "Martinez Rodriguez",
     age: 27,
@@ -77,28 +56,12 @@ let estudiantes = [
     favoriteVideoGame: "Risk of Rain 2",
     favoriteFilm: "Better call Saul",
     favoriteBook: "Vigilantes",
-<<<<<<< HEAD
-    petName: "",
-  },
-];
+  }]
 
-const busqueda = estudiantes.reduce((acc, estudiantes) => {
-  acc[estudiantes.name] = ++acc[estudiantes.name] || 0;
-  return acc;
-}, {});
 
-const duplicados = estudiantes.filter((estudiantes) => {
-  return busqueda[estudiantes.name];
-});
-=======
-    petName: ""
-},
-];
+function ordenarEstudiantes() {     
 
-/* Código de Carlos */
-function ordenarEstudiantes() {     // Función para ordenar los estudiantes
-
-    let listaOrdenada = estudiantes.sort(function (a, b) {      // Método para ordenar por apellido y nombre
+    let listaOrdenada = estudiantes.sort(function (a, b) { 
         if (a.surname.toLowerCase() > b.surname.toLowerCase()) {
             return 1;
         } else if (a.surname.toLowerCase() < b.surname.toLowerCase()) {
@@ -113,7 +76,7 @@ function ordenarEstudiantes() {     // Función para ordenar los estudiantes
     }
     );
 
-    for (i in listaOrdenada) {      // Bucle para mostrar las personas ordenadas
+    for (i in listaOrdenada) {      
         console.log(`${listaOrdenada[i].name} ${listaOrdenada[i].surname}:`);
         for (k in listaOrdenada[i]) {
             process.stdout.write(`${k}: ${listaOrdenada[i][k]} `);
@@ -123,7 +86,7 @@ function ordenarEstudiantes() {     // Función para ordenar los estudiantes
 };
 ordenarEstudiantes();
 
-/* Código de Fco Javier */
+
 function middleAge() {
   let aux = [...estudiantes];
   aux.sort((a, b) => a.age - b.age);
@@ -134,29 +97,13 @@ function middleAge() {
 middleAge();
 
 
-/* Código de Monica */
-  const busqueda = estudiantes.reduce((acc, estudiantes) => {
-    acc[estudiantes.name] = ++acc[estudiantes.name] || 0;
-    return acc;
-    }, {}); 
+let whoHasAPet = (estudiantes) => {
+  for(let i=0; i<=estudiantes.length-1; i++){
+  let list = (estudiantes[i])
   
-    const duplicados = estudiantes.filter( (estudiantes) => {
-      return busqueda[estudiantes.name];
-    });
->>>>>>> 3231665105103f482068c40eb9191bf5ba69e0fc
+  if (list.petName != "" ){
+    console.log(list.name, ("tiene mascota"));
+  }}
+}
 
-let nombreRepetido = (duplicados) => {
-  for (let i = 0; i <= duplicados.length - 1; i++) {
-    let list = duplicados[i];
-
-    if (
-      estudiantes.indexOf(estudiantes.name) != -1 &&
-      estudiantes.indexOf(estudiantes.name) == -1
-    )
-      repetidos.push(estudiantes.name);
-    {
-      console.log(list.name, "esta repetido");
-    }
-  }
-};
-nombreRepetido(duplicados);
+whoHasAPet(estudiantes);
