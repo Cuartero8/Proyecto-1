@@ -44,6 +44,7 @@ let estudiantes = [
 },
 ];
 
+/* Código de Carlos */
 function ordenarEstudiantes() {     // Función para ordenar los estudiantes
 
     let listaOrdenada = estudiantes.sort(function (a, b) {      // Método para ordenar por apellido y nombre
@@ -69,5 +70,35 @@ function ordenarEstudiantes() {     // Función para ordenar los estudiantes
         console.log();
     };
 };
-
 ordenarEstudiantes();
+
+/* Código de Fco Javier */
+function middleAge() {
+  let aux = [...estudiantes];
+  aux.sort((a, b) => a.age - b.age);
+  let i = Math.floor(aux.length/2);
+  console.log("The person with the middle age is " + aux[i].name + ", who is " + aux[i].age + " years old.");
+}
+
+middleAge();
+
+
+/* Código de Monica */
+  const busqueda = estudiantes.reduce((acc, estudiantes) => {
+    acc[estudiantes.name] = ++acc[estudiantes.name] || 0;
+    return acc;
+    }, {}); 
+  
+    const duplicados = estudiantes.filter( (estudiantes) => {
+      return busqueda[estudiantes.name];
+    });
+
+let nombreRepetido = (duplicados) => {
+    for (let i = 0; i <= duplicados.length - 1; i++) {
+        let list = duplicados[i];
+
+    if(estudiantes.indexOf(estudiantes.name)!=-1 && estudiantes.indexOf(estudiantes.name)==-1)
+        repetidos.push(estudiantes.name); {
+            console.log(list.name, "esta repetido")}
+    }};
+             nombreRepetido(duplicados); 
