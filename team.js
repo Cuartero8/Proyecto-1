@@ -1,5 +1,5 @@
 let estudiantes = [
-{
+  {
     name: "paul",
     surname: "castillo",
     age: 25,
@@ -9,6 +9,7 @@ let estudiantes = [
     favoriteVideoGame: "fifa",
     favoriteFilm: "",
     favoriteBook: "",
+    petName: "",
   },
 
   {
@@ -44,9 +45,10 @@ let estudiantes = [
     favoriteFood: "Lasagna",
     favoriteVideoGame: "Pokemon",
     favoriteFilm: "Harry Potter",
-    favoriteBook: "Harry Potter"},
-
-    {
+    favoriteBook: "Harry Potter",
+    petName: "",
+  },
+  {
     name: "Francisco Javier",
     surname: "Martinez Rodriguez",
     age: 27,
@@ -56,7 +58,40 @@ let estudiantes = [
     favoriteVideoGame: "Risk of Rain 2",
     favoriteFilm: "Better call Saul",
     favoriteBook: "Vigilantes",
-  }]
+    petName: "",
+  },
+];
+
+const busqueda = estudiantes.reduce((acc, estudiantes) => {
+  acc[estudiantes.name] = ++acc[estudiantes.name] || 0;
+  return acc;
+}, {});
+
+const duplicados = estudiantes.filter((estudiantes) => {
+  return busqueda[estudiantes.name];
+});
+
+let nombreRepetido = (duplicados) => {
+  var segundo = true;
+  for (let i = 0; i <= duplicados.length - 1; i++) {
+    let list = duplicados[i];
+
+    if (
+      estudiantes.indexOf(estudiantes.name) != -1 &&
+      estudiantes.indexOf(estudiantes.name) == -1
+    )
+      repetidos.push(estudiantes.name);
+    {
+      segundo = false;
+      console.log(list.name, "esta repetido");
+    }
+  }
+  if (segundo) {
+    console.log("No hay nombres repetidos.");
+  }
+};
+nombreRepetido(duplicados);
+  
 
 
 function ordenarEstudiantes() {     
@@ -107,3 +142,4 @@ let whoHasAPet = (estudiantes) => {
 }
 
 whoHasAPet(estudiantes);
+
