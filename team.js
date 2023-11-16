@@ -42,4 +42,32 @@ let estudiantes = [
     favoriteBook: "Vigilantes",
     petName: ""
 },
-]
+];
+
+function ordenarEstudiantes() {     // Función para ordenar los estudiantes
+
+    let listaOrdenada = estudiantes.sort(function (a, b) {      // Método para ordenar por apellido y nombre
+        if (a.surname.toLowerCase() > b.surname.toLowerCase()) {
+            return 1;
+        } else if (a.surname.toLowerCase() < b.surname.toLowerCase()) {
+            return -1;
+        } else if (a.surname.toLowerCase() === b.surname.toLowerCase()) {
+            if (a.name.toLowerCase() > b.name.toLowerCase()) {
+                return 1;
+            } else if (a.name.toLowerCase() < b.name.toLowerCase()) {
+                return -1;
+            } else { return 0; }
+        }
+    }
+    );
+
+    for (i in listaOrdenada) {      // Bucle para mostrar las personas ordenadas
+        console.log(`${listaOrdenada[i].name} ${listaOrdenada[i].surname}:`);
+        for (k in listaOrdenada[i]) {
+            process.stdout.write(`${k}: ${listaOrdenada[i][k]} `);
+        }
+        console.log();
+    };
+};
+
+ordenarEstudiantes();
